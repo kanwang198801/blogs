@@ -28,8 +28,6 @@ h5 {
 .ant-carousel .slick-slide {
   text-align: center;
   height: 420px;
-  line-height: 160px;
-  background: #364d79;
   overflow: hidden;
 }
 
@@ -64,5 +62,17 @@ h5 {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .ant-carousel .slick-slide {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ant-carousel .slick-slide {
+    height: 200px;
   }
 }

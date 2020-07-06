@@ -1,10 +1,2 @@
-.authorsContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.authorsContainer h5 {
-  margin-bottom: 0;
-}
-.authors {
+.blocks {
 }

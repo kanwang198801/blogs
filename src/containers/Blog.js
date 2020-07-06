@@ -88,9 +88,7 @@ const Blog = () => {
       </Helmet>
       <h1>{title}</h1>
       <Authors authors={authors} />
-      <Divider />
       <Slider images={images} />
-      <Divider />
       <Summary summary={summary} />
       <Divider />
       <Blocks blocks={blocks} />
