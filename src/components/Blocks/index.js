@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Block from '../Block';
 import styles from './styles.module.css';
 
-function Blocks({ blocks }) {
+const Blocks = ({ blocks }) => {
   return (
     <div className={styles.authorsContainer}>
       <div className={styles.authors}>
@@ -12,7 +12,7 @@ function Blocks({ blocks }) {
       </div>
     </div>
   );
-}
+};
 export default memo(Blocks);
 
 Blocks.propTypes = {
