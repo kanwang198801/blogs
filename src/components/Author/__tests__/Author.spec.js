@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-
 import Author from '../index';
+
 const author = {
   name: 'Centr Team',
   imageList: {
