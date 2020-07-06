@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import Author from '../Author';
 import styles from './styles.module.css';
 
@@ -16,3 +17,12 @@ function Authors({ authors }) {
   );
 }
 export default memo(Authors);
+
+Authors.propTypes = {
+  authors: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      imageList: PropTypes.object.isRequired,
+    }).isRequired
+  ),
+};

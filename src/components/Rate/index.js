@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles.module.css';
 import { Rate } from 'antd';
 
@@ -26,3 +27,10 @@ const RateNow = ({ rating, blog, setRating, updateRatingToBlog }) => {
   );
 };
 export default memo(RateNow);
+
+RateNow.propTypes = {
+  rating: PropTypes.number.isRequired,
+  blog: PropTypes.object.isRequired,
+  setRating: PropTypes.func.isRequired,
+  updateRatingToBlog: PropTypes.func.isRequired,
+};

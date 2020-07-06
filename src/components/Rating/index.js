@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles.module.css';
 import { Rate } from 'antd';
 
@@ -13,3 +14,10 @@ const Rating = ({ rating }) => {
   );
 };
 export default memo(Rating);
+
+Rating.propTypes = {
+  rating: PropTypes.shape({
+    totalRating: PropTypes.number.isRequired,
+    userCount: PropTypes.number.isRequired,
+  }).isRequired,
+};

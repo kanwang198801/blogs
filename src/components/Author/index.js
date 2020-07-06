@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles.module.css';
 import { Card, Avatar } from 'antd';
 
@@ -12,3 +13,10 @@ function Author({ author }) {
   );
 }
 export default memo(Author);
+
+Author.propTypes = {
+  author: PropTypes.shape({
+    name: PropTypes.string,
+    imageList: PropTypes.object.isRequired,
+  }).isRequired,
+};

@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import { Layout } from 'antd';
 import styles from './styles.module.css';
 
@@ -17,3 +18,7 @@ const Theme = ({ children }) => {
   );
 };
 export default memo(Theme);
+
+Theme.propTypes = {
+  children: PropTypes.node.isRequired,
+};

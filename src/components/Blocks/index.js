@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import Block from '../Block';
 import styles from './styles.module.css';
 
@@ -13,3 +14,5 @@ function Blocks({ blocks }) {
   );
 }
 export default memo(Blocks);
+
+Blocks.propTypes = {};
