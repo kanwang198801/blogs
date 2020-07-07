@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.css';
 import { Rate } from 'antd';
 
+const setAverageRating = (totalRating, userCount) => {
+  return Math.round(totalRating / userCount);
+};
 const Rating = ({ rating }) => {
   const { totalRating, userCount } = rating;
-  const averageRating = Math.round(totalRating / userCount);
+  const averageRating = setAverageRating(totalRating, userCount);
   return (
     <div className={styles.rating}>
       <h4>Average Rating</h4>

@@ -12,6 +12,16 @@ import Loader from '../components/Loader';
 import Data from '../data/article.json';
 import 'antd/dist/antd.css';
 
+const setRating = (blog) => {
+  let { rating } = blog;
+  return (
+    rating || {
+      userCount: 0,
+      totalRating: 0,
+    }
+  );
+};
+
 const Blog = () => {
   const [blog, setBlog] = useState(null);
   const [yourRating, setYourRating] = useState(0);
@@ -42,11 +52,7 @@ const Blog = () => {
   });
 
   const updateRatingToBlog = (yourRating, blog) => {
-    let { rating } = blog;
-    rating = rating || {
-      userCount: 0,
-      totalRating: 0,
-    };
+    const rating = setRating(blog);
     const newBlog = {
       ...blog,
       rating: {
@@ -56,7 +62,7 @@ const Blog = () => {
     };
     setBlog(newBlog);
   };
-
+  // localStorage.clear();
   if (loading) {
     return (
       <Theme>
@@ -74,11 +80,7 @@ const Blog = () => {
 
   const { authors, blocks, title, summary, imageList } = blog;
   const images = Object.values(imageList);
-
-  const rating = blog.rating || {
-    userCount: 0,
-    totalRating: 0,
-  };
+  const rating = setRating(blog);
 
   return (
     <Theme>
