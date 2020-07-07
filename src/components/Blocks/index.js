@@ -5,11 +5,9 @@ import styles from './styles.module.css';
 
 const Blocks = ({ blocks }) => {
   return (
-    <div className={styles.authorsContainer}>
-      <div className={styles.authors}>
-        {blocks.length > 0 &&
-          blocks.map((block, index) => <Block block={block} key={index} />)}
-      </div>
+    <div className={styles.blocks}>
+      {blocks.length > 0 &&
+        blocks.map((block, index) => <Block block={block} key={index} />)}
     </div>
   );
 };
