@@ -20,12 +20,11 @@ exports[`renders learn react link 1`] = `
         >
           <span
             aria-label="loading"
-            class="anticon anticon-loading"
+            class="anticon anticon-loading anticon-spin"
             role="img"
           >
             <svg
               aria-hidden="true"
-              class="anticon-spin"
               data-icon="loading"
               fill="currentColor"
               focusable="false"

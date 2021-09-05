@@ -1,15 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should match the snapshot 1`] = `
-<div
-  class="block"
->
-  <p>
-    You’ve just got home from work, you’ve squeezed in a workout, the last thing you want to do is think too hard about food. Luckily, you don’t have to. This weeknight recipe collection is all about simple ingredients (many of which you already have in your pantry or fridge), quick cook times and all-round bang for your buck. Consider your dinner sorted!
-  </p>
-</div>
-`;
-
 exports[`should match the snapshot with normal content 1`] = `
 <div
   class="block"
